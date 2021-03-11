@@ -21,15 +21,15 @@ class _CitiesPageState extends State<CitiesPage> {
       barrierDismissible: false,
       builder: (context) => Center(
         child: AlertDialog(
-          title: Text('Confirmación'),
-          content: Text('Seguro que desea eliminar la ciudad ${city.title}?'),
+          title: Text('Confirmation'),
+          content: Text('Are you sure you want to delete\n${city.title}?'),
           actions: <Widget>[
             OutlineButton(
               child: Text('NO'),
               onPressed: () => Navigator.of(context).pop(false),
             ),
             OutlineButton(
-              child: Text('SI'),
+              child: Text('YES'),
               onPressed: () => Navigator.of(context).pop(true),
             )
           ],
@@ -98,12 +98,12 @@ class _CitiesPageState extends State<CitiesPage> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   HeaderWidget(
-                    title: 'Mis ciudades',
+                    title: 'My Cities',
                   ),
                   Expanded(
                     child: bloc.cities.isEmpty
                         ? Center(
-                            child: Text('No tienes ciudades :('),
+                            child: Text('You have no cities :('),
                           )
                         : ListView.builder(
                             padding: const EdgeInsets.only(

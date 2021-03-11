@@ -236,19 +236,19 @@ class WeatherItem extends StatelessWidget {
                 Row(children: [
                   Expanded(
                     child: _WeatherItemDetails(
-                      title: 'Viento',
+                      title: 'Wind',
                       value: "${weather.windSpeed.toStringAsFixed(2)} mph",
                     ),
                   ),
                   Expanded(
                     child: _WeatherItemDetails(
-                      title: 'Presión de aire',
+                      title: 'Air Pressure',
                       value: '${weather.airPressure.toStringAsFixed(2)} mbar',
                     ),
                   ),
                   Expanded(
                     child: _WeatherItemDetails(
-                      title: 'Humedad',
+                      title: 'Humidity',
                       value: '${weather.humidity}%',
                     ),
                   ),

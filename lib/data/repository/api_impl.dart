@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:core';
 
 import 'package:weatherflut/data/data_constants.dart';
 import 'package:weatherflut/data/repository/api_repository.dart';
@@ -10,7 +11,7 @@ class ApiImpl extends ApiRepository {
   @override
   Future<List<City>> getCities(String text) async {
     final url = '${api}search/?query=$text';
-    final response = await http.get(url);
+    final response = await http.get(Uri.parse(url));
     final body = Utf8Decoder().convert(response.bodyBytes);
     final data = jsonDecode(body) as List;
     final cities = data.map((e) => City.fromJson(e)).toList();
@@ -20,7 +21,7 @@ class ApiImpl extends ApiRepository {
   @override
   Future<City> getWeathers(City city) async {
     final url = '$api${city.id}';
-    final response = await http.get(url);
+    final response = await http.get(Uri.parse(url));
     final body = Utf8Decoder().convert(response.bodyBytes);
     final data = jsonDecode(body);
     final weatherData = data['consolidated_weather'] as List;

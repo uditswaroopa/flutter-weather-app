@@ -51,7 +51,7 @@ class _AddCityPageState extends State<AddCityPage> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 HeaderWidget(
-                  title: 'Agregar ciudad',
+                  title: 'Add City',
                 ),
                 const SizedBox(
                   height: 15,
@@ -64,7 +64,7 @@ class _AddCityPageState extends State<AddCityPage> {
                       focusedBorder: InputBorder.none,
                       border: InputBorder.none,
                       filled: true,
-                      hintText: 'Buscar ciudad',
+                      hintText: 'Search City',
                       fillColor: Colors.grey[200],
                       prefixIcon: Icon(
                         Icons.search,

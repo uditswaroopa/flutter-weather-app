@@ -37,7 +37,7 @@ class EmptyWidget extends StatelessWidget {
                     height: 80,
                   ),
                   Text(
-                    'Hola,\nBienvenido',
+                    'Hello,\nWelcome',
                     textAlign: TextAlign.start,
                     style: TextStyle(
                       fontSize: 34,
@@ -48,7 +48,7 @@ class EmptyWidget extends StatelessWidget {
                     height: 20,
                   ),
                   Text(
-                    'Qué te parece si agregamos\nuna nueva ciudad?',
+                    'What do you think if we add\na new city?',
                     textAlign: TextAlign.start,
                   ),
                   const SizedBox(
@@ -62,7 +62,7 @@ class EmptyWidget extends StatelessWidget {
                         15.0,
                       ),
                     ),
-                    child: Text('Agregar ciudad'),
+                    child: Text('Add City'),
                     onPressed: onTap,
                   ),
                 ],

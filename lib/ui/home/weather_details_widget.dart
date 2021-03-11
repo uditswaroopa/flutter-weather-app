@@ -22,7 +22,7 @@ class WeatherDetailsWidget extends StatelessWidget {
               height: 30,
             ),
             Text(
-              'Pronóstico de ${city.weathers.length} Días',
+              'Coming ${city.weathers.length} Days',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 25,
@@ -79,19 +79,19 @@ class WeatherDetailsWidget extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: Text(
-                                  'Viento',
+                                  'Wind',
                                   textAlign: TextAlign.center,
                                 ),
                               ),
                               Expanded(
                                 child: Text(
-                                  'Presión de aire',
+                                  'Air Pressure',
                                   textAlign: TextAlign.center,
                                 ),
                               ),
                               Expanded(
                                 child: Text(
-                                  'Humedad',
+                                  'Humidity',
                                   textAlign: TextAlign.center,
                                 ),
                               ),
